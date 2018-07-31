@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import './responsive.scss';
 import Map from './Map'
 import Sidebar from './Sidebar';
 import Header from './Header';

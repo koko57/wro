@@ -17,14 +17,13 @@ class Map extends Component {
             </GoogleMap>
    )));
    return(
-      <div>
-        <GoogleMapExample
-        googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyB05dcc0ITwKkEM0PomMgtsobDCE2evMHM&libraries=drawing,places"
-        loadingElement={<div style={{ height: '100%' }} />}
-        containerElement={ <div style={{ height: 'calc(100vh - 70px)', width: '80%', float: 'right' }} /> }
-        mapElement={ <div style={{ height: '100%' }} /> }
-        />
-      </div>
+       <div className="map">
+            <GoogleMapExample       googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyB05dcc0ITwKkEM0PomMgtsobDCE2evMHM&libraries=drawing,places"
+            loadingElement={<div style={{ height: '100%' }} />}
+            containerElement={ <div style={{ height: '100%'}} /> }
+            mapElement={ <div style={{ height: '100%' }} /> }
+            />
+        </div>
    );
    }
 };

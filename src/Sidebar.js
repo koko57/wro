@@ -5,8 +5,7 @@ class Sidebar extends Component {
     render() {
         return (
         <div className="sidebar">
-          <input type="text" name="search" id="searchLoc" placeholder="Search location"/>
-          <select name="" id="">
+          <select name="" id="placeFilter">
             <option value="none" disabled>Filter</option>
             <option value="coffee">Coffee</option>
             <option value="techno">Techno</option>
