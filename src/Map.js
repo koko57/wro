@@ -1,19 +1,22 @@
 import React, { Component } from 'react';
 import { withScriptjs, withGoogleMap, GoogleMap, Marker, InfoWindow } from 'react-google-maps';
+// import Markers from './Markers'
 
 class Map extends Component {
-    
     render() {
-        let coffeeSpots = this.props.places.map(loc => 
-            (<Marker position={{lat: loc.lat, lng: loc.lng }} key={loc.fullName}>
+        const { placeFilter } = this.props;
+        let {places} = this.props;
+        let spots = places.map(loc => 
+            (<Marker position={{lat: loc.lat, lng: loc.lng }} key={loc.fullName} type={loc.type}>
               <InfoWindow><p>{loc.fullName}</p></InfoWindow>
             </Marker>)
         ); 
+        
         const GoogleMapExample = withScriptjs(withGoogleMap(props => (
             <GoogleMap
                 defaultCenter = {{ lat: 51.110903, lng: 17.033538 }}
-                defaultZoom = { 14 }>
-                {coffeeSpots}
+                defaultZoom = { 13 }>
+                {placeFilter ? spots.filter(loc => loc.props.type === placeFilter) : spots}
             </GoogleMap>
    )));
    return(

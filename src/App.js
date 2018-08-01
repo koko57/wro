@@ -5,40 +5,29 @@ import Map from './Map'
 import Sidebar from './Sidebar';
 import Header from './Header';
 
+
+
+
 class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      places: [{
-        fullName: 'Bema Cafe',
-        lat: 51.1182005,
-        lng: 17.0400579,
-        type: 'break'
-      }, {
-        fullName: 'Gniazdo',
-        lat: 51.105362,
-        lng: 17.0315874,
-        type: 'coffee'
-      }, {
-        fullName: 'Paloma',
-        lat: 51.1094935,
-        lng: 17.028659,
-        type: 'coffee'
-      }, {
-        fullName: 'Etno Okrąglak',
-        lat: 51.10238529999999,
-        lng: 17.0300293,
-        type: 'coffee'
-      }]
+      places: require('./places.json'),
+      placeFilter: ''
     }
+    this.filterPlaces = this.filterPlaces.bind(this);
   }
 
+  filterPlaces(e) {
+    this.setState({placeFilter : e})
+  }
+  
   render() {
     return (
       <div className="app">
         <Header />
-        <Sidebar places={this.state.places} />
-        <Map places={this.state.places}/>
+        <Sidebar places={this.state.places} filterPlaces={this.filterPlaces}/>
+        <Map places={this.state.places} placeFilter={this.state.placeFilter}/>
       </div>
     );
   }
