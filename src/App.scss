@@ -1,0 +1,18 @@
+.app {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  @media screen and (max-width: 640px) {
+    flex-direction: column;
+  }
+}
+
+.map {
+  flex: 1;
+  height: calc(100% - 70px);
+  @media screen and (max-width: 640px) {
+    order: 3;
+    width: 100%;
+    height: calc(100% - 140px);
+  }
+}
