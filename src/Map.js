@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import { withScriptjs, withGoogleMap, GoogleMap, Marker, InfoWindow } from 'react-google-maps';
-// import Markers from './Markers'
+import Spot from './Spot'
 
 class Map extends Component {
+    
+
     render() {
         const { placeFilter } = this.props;
         let {places} = this.props;
         let spots = places.map(loc => 
-            (<Marker position={{lat: loc.lat, lng: loc.lng }} key={loc.fullName} type={loc.type}>
-              <InfoWindow><p>{loc.fullName}</p></InfoWindow>
-            </Marker>)
+            (<Spot position={{lat: loc.lat, lng: loc.lng }} key={loc.fullName} type={loc.type} name={loc.fullName}/>)
         ); 
         
         const GoogleMapExample = withScriptjs(withGoogleMap(props => (
