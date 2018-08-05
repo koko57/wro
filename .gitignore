@@ -22,3 +22,8 @@ yarn-error.log*
 src/responsive.scss
 src/Sidebar.css
 src/App.css
+src/Place.js
+src/Header.css
+src/App.css
+src/Sidebar.css
+src/index.css
