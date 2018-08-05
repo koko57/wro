@@ -7,29 +7,28 @@ import { faChevronDown, faBars } from '@fortawesome/free-solid-svg-icons';
 library.add([faChevronDown, faBars]);
 
 const Sidebar = (props) => {
-  let resultFilter
-  const handleChange = (e) => {
-    resultFilter = e.target.value;
-    props.filterPlaces(resultFilter);
-  }
   
-
-  let {placeFilter, places} = props;
-   
+  const select = (e) => {
+    props.filterPlaces(e.target.value);
+  }
+  const search = (e) => {
+    props.filterByName(e.target.value)
+  }
         return (
-        <div className="sidebar">
-          <select name="placeFilter" id="placeFilter" onChange={handleChange}>
-            <option value="none" selected disabled>Filter</option>
-            <option value="coffee">Coffee</option>
-            <option value="techno">Techno</option>
-            <option value="art">Art</option>
-            <option value="" >All</option>
-          </select>
-          <FontAwesomeIcon icon="chevron-down" onClick={() => document.getElementById('places-list').setAttribute("display", "block")}/>
-          <ul className="places-list" id="places-list">
-            {placeFilter ? places.filter(pl => pl.type === placeFilter).map(place => <li className="places-list--item">{place.fullName}</li>) : places.map(place => <li className="places-list--item">{place.fullName}</li>)}
-          </ul>
-        </div>
+          <div className="sidebar">
+          <input type="text" name="searchByName" id="search" placeholder="Search By Name" onChange={search}/>
+            <select name="placeFilter" id="placeFilter" onChange={select}>
+              <option value="none" disabled>Filter</option>
+              <option value="coffee">Coffee</option>
+              <option value="techno">Techno</option>
+              <option value="art">Art</option>
+              <option value="" >All</option>
+            </select>
+            <FontAwesomeIcon icon="chevron-down"/>
+            <ul className="places-list" id="places-list">
+              {props.places.map(place => <li className="places-list--item" onClick={props.selectMarker} id={place.fullName} key={place.fullName}>{place.fullName}</li>)}
+            </ul>
+          </div>
         )
     
 }
