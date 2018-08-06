@@ -1,58 +1,52 @@
 [{
-    "fullName": "Wyspa Tamka",
+    "name": "Wyspa Tamka",
     "lat": 51.1148007,
     "lng": 17.0371877,
     "type": "techno"
 }, {
-    "fullName": "Das Lokal",
+    "name": "Das Lokal",
     "lat": 51.112918,
     "lng": 17.019329,
     "type": "techno"
 }, {
-    "fullName": "Krakowska 100",
+    "name": "Klub Pralnia",
     "lat": 51.09041,
     "lng": 17.065847,
     "type": "techno"
 }, {
-    "fullName": "Bema Cafe",
+    "name": "Bema Cafe",
     "lat": 51.1182005,
     "lng": 17.0400579,
     "type": "coffee"
 }, {
-    "fullName": "Gniazdo",
+    "name": "Gniazdo",
     "lat": 51.105362,
     "lng": 17.0315874,
     "type": "coffee"
 }, {
-    "fullName": "Paloma",
+    "name": "Paloma",
     "lat": 51.1094935,
     "lng": 17.028659,
     "type": "coffee"
 }, {
-    "fullName": "Etno Okrąglak",
+    "name": "Etno Okrąglak",
     "lat": 51.10238529999999,
     "lng": 17.0300293,
     "type": "coffee"
-},  {
-    "fullName": "NAWA",
-    "lat": 51.114394,
-    "lng": 17.038562,
-    "type": "art"
 }, {
-    "fullName": "Wroclaw Contemporary Museum",
+    "name": "Muzeum Współczesne",
     "lat": 51.113224,
     "lng": 17.005305,
     "type": "art"
 }, {
-    "fullName": "The Four Domes Pavilion",
+    "name": "Pawilon Czterech Kopuł",
     "lat": 51.108099,
     "lng": 17.075851,
     "type": "art"
 }, {
-    "fullName": "Wroclaw Neons",
-    "lat": 51.109971,
-    "lng": 17.024562,
+    "name": "Muzeum Narodowe",
+    "lat": 51.110833, 
+    "lng": 17.047611,
     "type": "art"
 }
-
 ]

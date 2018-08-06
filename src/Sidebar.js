@@ -26,7 +26,7 @@ const Sidebar = (props) => {
             </select>
             <FontAwesomeIcon icon="chevron-down"/>
             <ul className="places-list" id="places-list">
-              {props.places.map(place => <li className="places-list--item" onClick={props.selectMarker} id={place.fullName} key={place.fullName}>{place.fullName}</li>)}
+              {props.places.map(place => <li className="places-list--item" onClick={props.selectMarker} id={place.name} key={place.name}>{place.name}</li>)}
             </ul>
           </div>
         )
