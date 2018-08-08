@@ -1,5 +1,4 @@
-[
-    {
+[{
     "name": "Wyspa Tamka",
     "lat": 51.1148007,
     "lng": 17.0371877,
@@ -46,8 +45,7 @@
     "type": "art"
 }, {
     "name": "Muzeum Narodowe",
-    "lat": 51.110833, 
+    "lat": 51.110833,
     "lng": 17.047611,
     "type": "art"
-}
-]
+}]

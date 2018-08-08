@@ -4,7 +4,7 @@ import Map from './Map';
 import Header from './Header';
 import Sidebar from './Sidebar';
 import escapeRegExp from 'escape-string-regexp';
-import { getInfo } from './fsAPI';
+import { getInfo } from '../utils/fsAPI';
 
 class App extends Component {
   constructor(props) {
