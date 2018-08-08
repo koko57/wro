@@ -1,0 +1,32 @@
+@import '../utils/variables';
+
+.map {
+    height: 100%;
+    width: 100%;
+    flex: 1;
+    @media screen and (max-width: 640px) {
+        order: 2;
+    }
+}
+
+.gm-style-iw {
+    text-align: center;
+    h3 {
+        font-family: $JosieFont;
+        font-weight: bold;
+        font-size: 1.3em;
+        margin: 10px auto 0;
+    }
+    p {
+        font-family: $QuickFont;
+        margin-bottom: 2px;
+    }
+    img {
+        margin: 10px auto;
+    }
+}
+
+.gmnoprint:hover img,
+.gmnoprint:focus img {
+    transform: scale(2);
+}
