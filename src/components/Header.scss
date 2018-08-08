@@ -1,0 +1,14 @@
+@import 'variables';
+
+.header {
+    height: 70px;
+    width: 100%;
+    background-color: $darkgray;
+    color: $lightgray;
+    line-height: 70px;
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-family: $JosieFont;    
+}
+
