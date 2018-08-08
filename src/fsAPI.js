@@ -1,6 +1,6 @@
 const fUrl = 'https://api.foursquare.com/v2/venues/';
 const clientId = '3O5GTSKBYIUIKVBC4ZNKNLZT5DIJNJGVQANHDOC4QAQLOCEV';
-const clientSecret = 'N1HMOWZA3ZVE3GNIK2M4TDHS2IPVFWTS4G5P5LNMMBVYWJOU';
+const clientSecret = 'MYCT4S41YLTAZYVNA20WBCTDJEKRFFBXR1UMHDVKQ1KMYSHD';
 const auth = `&client_id=${clientId}&client_secret=${clientSecret}&v=20180806`;
 
 
@@ -13,14 +13,13 @@ export const getInfo = new Promise((resolve, reject) => {
         .then(id => fetch(`${fUrl}${id}?${auth}`)
             .then(res => res.json())
             .then(data => {
-                pl.address = data.response.venue.location.formattedAddress;
+                pl.address = data.response.venue.location.address;
                 pl.rating = data.response.venue.rating;
                 pl.fsURL = data.response.venue.canonicalUrl;
                 pl.photo = data.response.venue.bestPhoto.prefix + "100x100" + data.response.venue.bestPhoto.suffix;
             }))
         .catch(err => {
             console.log(err, 'Loading error');
-            alert('Sorry, we couldn\'t log the venues');
         }));
     resolve(places)
     reject(new Error('Something went wrong!'))
