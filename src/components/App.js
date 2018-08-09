@@ -66,30 +66,28 @@ class App extends Component {
   }
 
   render() {
-    //chooses places which should be passed to the props depending on applied filters 
-      let spots
       const {
         places,
         placeFilter,
         filtered,
         query,
         filteredByName
-      } = this.state
-      placeFilter ? spots = filtered : spots = places;
-      query ? spots = filteredByName : spots;
+      } = this.state;
+
     return (
       <div className="app">
         <Header />
         <div className="main">
           <Sidebar 
-            places={spots} 
+          //chooses places which should be passed to the props depending on applied filters 
+            places={query ? filteredByName : (placeFilter ? filtered : places)} 
             filterPlaces={this.filterPlaces} 
             filterByName={this.filterByName} 
             selectMarker={this.selectMarker} 
             query={this.state.query}
           />
           <Map 
-            places={spots} 
+            places={query ? filteredByName : (placeFilter ? filtered : places)} 
             placesInfo={this.state.placesInfo} 
             selected={this.state.selected} 
             clear={this.clearSelection}

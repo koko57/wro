@@ -10,7 +10,6 @@
 }
 
 .infoWindow {
-    // height: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,11 +17,12 @@
     h3 {
         font-family: $JosieFont;
         font-weight: bold;
-        font-size: 1.3em;
+        font-size: 1.4em;
         margin: 10px auto 0;
     }
     p, a {
         font-family: $QuickFont;
+        font-size: 1.1em;
         margin-bottom: 5px;
     }
     img {

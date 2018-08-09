@@ -15,9 +15,9 @@ const Sidebar = (props) => {
         <input type="text" id="search" placeholder="Search By Name" value={props.query} onChange={search}/>
         <select name="placeFilter" id="placeFilter" onChange={select}>
           <option value="" >All</option>
-          <option value="coffee">Coffee</option>
-          <option value="techno">Techno</option>
-          <option value="art">Art</option>
+          <option value="coffee">Coffee spots</option>
+          <option value="techno">Techno venues</option>
+          <option value="art">Museums</option>
         </select>
       </div>
       <div className="places-list-container">
