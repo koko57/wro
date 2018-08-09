@@ -36,11 +36,12 @@ const GMap = compose(
                     <InfoWindow key={loc.name} onCloseClick={props.clear}>
                         <div className="infoWindow">
                             <h3>{loc.name}</h3>
-                            <img src={loc.photo } alt="Venue"/> 
-                            <p>{loc.address ? loc.address : "Sorry, we couldn't load more info"}</p>
-                            <p>{loc.venueType}</p>
-                            <p>Rating: {loc.rating}</p>
-                            <a href={loc.fsURL}>View on Foursquare</a>
+                            {loc.photo && <img src={loc.photo} alt="Venue"/> }
+                            {loc.address && <p>{loc.address}</p> }
+                            {loc.venueType && <p>{loc.venueType}</p>}
+                            {loc.rating && <p>Rating: {loc.rating}</p>}
+                            {loc.fsURL && <a href={loc.fsURL}>View on Foursquare</a>}
+                            {(!loc.address || !loc.venueType || !loc.rating || !loc.fsURL) && <p>Sorry, we couldn't load more info</p>} 
                         </div>
                     </InfoWindow>}
                 </Marker>))}
