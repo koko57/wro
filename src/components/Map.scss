@@ -9,19 +9,23 @@
     }
 }
 
-.gm-style-iw {
-    text-align: center;
+.infoWindow {
+    // height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 20px;
     h3 {
         font-family: $JosieFont;
         font-weight: bold;
         font-size: 1.3em;
         margin: 10px auto 0;
     }
-    p {
+    p, a {
         font-family: $QuickFont;
-        margin-bottom: 2px;
+        margin-bottom: 5px;
     }
     img {
-        margin: 10px auto;
+        margin: 15px auto;
     }
 }

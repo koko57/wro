@@ -33,12 +33,14 @@ const GMap = compose(
                     onClick={() => props.handleClick(loc.name)}
                 >
                     {props.selected && props.selected === loc.name && 
-                    <InfoWindow key={loc.name}>
-                        <div>
+                    <InfoWindow key={loc.name} onCloseClick={props.clear}>
+                        <div className="infoWindow">
                             <h3>{loc.name}</h3>
                             <img src={loc.photo } alt="Venue"/> 
-                            <p>{loc.fsURL ? loc.fsURL : loc.type}</p>
                             <p>{loc.address ? loc.address : "Sorry, we couldn't load more info"}</p>
+                            <p>{loc.venueType}</p>
+                            <p>Rating: {loc.rating}</p>
+                            <a href={loc.fsURL}>View on Foursquare</a>
                         </div>
                     </InfoWindow>}
                 </Marker>))}
@@ -53,6 +55,7 @@ class Map extends Component {
                 places={this.props.places} 
                 selected={this.props.selected} 
                 handleClick={this.props.handleClick}
+                clear={this.props.clear}
             />
         </div>
         );

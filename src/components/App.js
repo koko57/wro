@@ -92,6 +92,7 @@ class App extends Component {
             places={spots} 
             placesInfo={this.state.placesInfo} 
             selected={this.state.selected} 
+            clear={this.clearSelection}
             handleClick={this.openInfo}
           />
         </div>
@@ -111,7 +112,8 @@ Sidebar.propTypes = {
 Map.propTypes = {
   places: PropTypes.array.isRequired, 
   placesInfo: PropTypes.array.isRequired, 
-  selected: PropTypes.string.isRequired, 
+  selected: PropTypes.string.isRequired,
+  clear: PropTypes.func.isRequired, 
   handleClick: PropTypes.func.isRequired
 }
 

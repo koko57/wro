@@ -15,6 +15,7 @@ export const getInfo = new Promise((resolve, reject) => {
             .then(data => {
                 pl.address = data.response.venue.location.address;
                 pl.rating = data.response.venue.rating;
+                pl.venueType = data.response.venue.categories[0].name;
                 pl.fsURL = data.response.venue.canonicalUrl;
                 pl.photo = data.response.venue.bestPhoto.prefix + "100x100" + data.response.venue.bestPhoto.suffix;
             }))
