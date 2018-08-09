@@ -1,6 +1,7 @@
 /*global google*/
 import React, { Component } from 'react';
 import { compose, withProps } from 'recompose';
+import PropTypes from 'prop-types';
 import './Map.scss'
 import { withScriptjs, withGoogleMap, GoogleMap, Marker, InfoWindow } from 'react-google-maps';
 
@@ -26,7 +27,6 @@ const GMap = compose(
                     position={{lat: loc.lat, lng: loc.lng }} 
                     key={loc.name} 
                     type={loc.type}
-                    title={loc.name} 
                     icon={props.selected === loc.name ? selected : unselected}
                     selected={props.selected} 
                     animation={google.maps.Animation.DROP} 
@@ -41,7 +41,7 @@ const GMap = compose(
                             <p>{loc.address ? loc.address : "Sorry, we couldn't load more info"}</p>
                         </div>
                     </InfoWindow>}
-            </Marker>))}
+                </Marker>))}
         </GoogleMap>
 ));
 
@@ -58,4 +58,11 @@ class Map extends Component {
         );
     }
 };
+
+GMap.propTypes = {
+    places: PropTypes.array.isRequired,
+    selected: PropTypes.string.isRequired,
+    handleClick: PropTypes.func.isRequired
+  };
+
 export default Map;

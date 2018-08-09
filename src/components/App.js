@@ -3,6 +3,7 @@ import './App.scss';
 import Map from './Map';
 import Header from './Header';
 import Sidebar from './Sidebar';
+import PropTypes from 'prop-types';
 import escapeRegExp from 'escape-string-regexp';
 import { getInfo } from '../utils/fsAPI';
 
@@ -29,14 +30,14 @@ class App extends Component {
       this.setState({ places: places })
     );
   }
-
+  //filters places by type, removes marker selection and search query
   filterPlaces(e) {
     this.setState({
       placeFilter: e,
       filtered: this.state.places.filter(pl => pl.type === e),
       selected: '',
       query: ''
-    })
+    });
   }
 
   clearSelection() {
@@ -85,11 +86,11 @@ class App extends Component {
             filterPlaces={this.filterPlaces} 
             filterByName={this.filterByName} 
             selectMarker={this.selectMarker} 
+            query={this.state.query}
           />
           <Map 
             places={spots} 
             placesInfo={this.state.placesInfo} 
-            placeFilter={this.state.placeFilter} 
             selected={this.state.selected} 
             handleClick={this.openInfo}
           />
@@ -97,6 +98,21 @@ class App extends Component {
       </div>
     );
   }
+}
+
+Sidebar.propTypes = {
+  places: PropTypes.array.isRequired, 
+  filterPlaces: PropTypes.func.isRequired, 
+  filterByName: PropTypes.func.isRequired,
+  selectMarker: PropTypes.func.isRequired, 
+  query: PropTypes.string
+}
+
+Map.propTypes = {
+  places: PropTypes.array.isRequired, 
+  placesInfo: PropTypes.array.isRequired, 
+  selected: PropTypes.string.isRequired, 
+  handleClick: PropTypes.func.isRequired
 }
 
 export default App;

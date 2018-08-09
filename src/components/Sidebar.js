@@ -12,7 +12,7 @@ const Sidebar = (props) => {
   return (
     <div className="sidebar">
       <div className="search-filter-bar">
-        <input type="text" name="searchByName" id="search" placeholder="Search By Name" onChange={search}/>
+        <input type="text" id="search" placeholder="Search By Name" value={props.query} onChange={search}/>
         <select name="placeFilter" id="placeFilter" onChange={select}>
           <option value="" >All</option>
           <option value="coffee">Coffee</option>
