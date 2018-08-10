@@ -41,7 +41,7 @@ const GMap = compose(
                             {loc.venueType && <p>{loc.venueType}</p>}
                             {loc.rating && <p>Rating: {loc.rating}</p>}
                             {loc.fsURL && <a href={loc.fsURL}>View on Foursquare</a>}
-                            {(!loc.address || !loc.venueType || !loc.rating || !loc.fsURL) && <p>Sorry, we couldn't load more info</p>} 
+                            {(!loc.address || !loc.venueType || !loc.rating || !loc.fsURL) && <p>Sorry, we couldn't load more info.</p>} 
                         </div>
                     </InfoWindow>}
                 </Marker>))}
