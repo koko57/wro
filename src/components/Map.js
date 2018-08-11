@@ -11,7 +11,7 @@ const unselected = 'https://vectr.com/koko57/f150I6xd8A.svg?width=30&height=45&s
 
 const GMap = compose(
     withProps({
-        googleMapURL: "https://maps.googleapis.com/maps/api/js?key=vhjvAIzaSyAV7fdobyXF7j4zxbq5S71P6efvsfx54nA&libraries=drawing,places",
+        googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyAV7fdobyXF7j4zxbq5S71P6efvsfx54nA&libraries=drawing,places",
         loadingElement: <div style={{ height: `100%` }} />,
         containerElement: <div style={{ height: `100%` }} />,
         mapElement: <div style={{ height: `100%` }}/>
