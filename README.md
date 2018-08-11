@@ -5,6 +5,8 @@
 * [About the App](#abouttheapp)
 * [Getting started](#gettingstarted)
 * [Tools used in this project](#toolsusedinthisproject)
+* [Note about the Service Worker](#noteabouttheserviceworker)
+
 
 ## About the App
 This is the last, fifth project of the Udacity FEND program. The app using Google Maps shows my favourite locations in Wroclaw PL. The places can be filtered by location type (coffee spots, techno venues, museums) or by name.
@@ -28,12 +30,20 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### npm packages 
 * react-google-maps
+* recompose
 * sass-loader 
 * node-sass
 * prop-types
 * escape-string-regexp
-* 
 
 ### Styling elements
 Marker icons and favicon created with vectr.com
 Google Fonts: Josefin Sans and Quicksand
+
+## Note about the Service Worker
+The service Worker provided by create-react-app works only in production build.
+to run the app in production build follow these steps:
+* run following commands in the terminal/command line:
+   `npm run build`
+   `serve -s build`
+* open `localhost 500` in your browser.

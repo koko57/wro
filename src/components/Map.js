@@ -11,7 +11,7 @@ const unselected = 'https://vectr.com/koko57/f150I6xd8A.svg?width=30&height=45&s
 
 const GMap = compose(
     withProps({
-        googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyAV7fdobyXF7j4zxbq5S71P6efvsfx54nA&libraries=drawing,places",
+        googleMapURL: "https://maps.googleapis.com/maps/api/js?key=vhjvAIzaSyAV7fdobyXF7j4zxbq5S71P6efvsfx54nA&libraries=drawing,places",
         loadingElement: <div style={{ height: `100%` }} />,
         containerElement: <div style={{ height: `100%` }} />,
         mapElement: <div style={{ height: `100%` }}/>
@@ -39,9 +39,9 @@ const GMap = compose(
                             {loc.photo && <img src={loc.photo} alt="Venue"/> }
                             {loc.address && <p>{loc.address}</p> }
                             {loc.venueType && <p>{loc.venueType}</p>}
-                            {loc.rating && <p>Rating: {loc.rating}</p>}
+                            {loc.rating ? <p>Rating: {loc.rating}</p> : <p>No rating yet.</p>}
                             {loc.fsURL && <a href={loc.fsURL}>View on Foursquare</a>}
-                            {(!loc.address || !loc.venueType || !loc.rating || !loc.fsURL) && <p>Sorry, we couldn't load more info.</p>} 
+                            {(!loc.address || !loc.venueType || !loc.fsURL) && <p>Sorry, we couldn't load more info.</p>} 
                         </div>
                     </InfoWindow>}
                 </Marker>))}

@@ -7,13 +7,17 @@
     <link rel="icon" href="./favicon.ico" type="image/x-icon"/>
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <link href="https://fonts.googleapis.com/css?family=Quicksand|Josefin+Sans" rel="stylesheet">
-
-    <title>mApp</title>
+    <title>WrocFavs</title>
   </head>
   <body>
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
+    <script>
+      function gm_authFailure() {
+        alert("Sorry, we couldn't load Google Maps - API key is invalid.")
+      }
+    </script>
     <div id="root"></div>
   </body>
 </html>
