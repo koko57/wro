@@ -1,13 +1,13 @@
 @import '../utils/variables';
 
 .sidebar {
-    background-color: $darkgray;
+    background-color: $grey-dark;
     width: 300px;
     height: 100%;
     padding: 0 10px 10px;
     overflow: scroll;
     transition: 0.2s ease-in;
-    @media screen and (max-width: 640px) {
+    @media screen and ($media-640) {
         display: block;
         height: auto;
         width: 100%;
@@ -19,11 +19,11 @@
     width: 100%;
     padding: 0 30px;
     text-align: center;
-    @media screen and (max-width: 640px) {
+    @media screen and ($media-640) {
         display: flex;
         justify-content: space-around;
     }
-    @media screen and (max-width: 480px) {
+    @media screen and ($media-480) {
         padding: 0 10px;
     }
 }
@@ -31,15 +31,15 @@
 %search-filter {
     -webkit-appearance: none;
     -moz-appearance: none;
-    border: 2px solid $lightgray !important;
+    border: 2px solid $grey-light !important;
     border-radius: 5px !important;
-    color: $lightgray;
-    background-color: $lightgray01;
+    color: $grey-light;
+    background-color: $grey-light-01;
     padding: 5px 10px;
     width: 100%;
     margin: 5px auto;
     font-size: 0.9em;
-    @media screen and (max-width: 640px) {
+    @media screen and ($media-640) {
         width: 42%;
     }
 }
@@ -51,17 +51,17 @@
 #search {
     @extend %search-filter;
     &::-webkit-input-placeholder {
-        color: $lightgray;
+        color: $grey-light;
     }
 }
 
 .places-list-container {
     padding: 10px 30px;
-    @media screen and (max-width: 640px) {
+    @media screen and ($media-640) {
         width: 100%;
         padding: 5px 30px;
     }
-    @media screen and (max-width: 480px) {
+    @media screen and ($media-480) {
         padding: 0 5px;
     }
 }
@@ -72,7 +72,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    @media screen and (max-width: 640px) {
+    @media screen and ($media-640) {
         height: auto;
         flex-direction: row;
         overflow-y: scroll;
@@ -86,9 +86,9 @@
         cursor: pointer;
         &:hover {
             transition: 0.2s ease-in;
-            border-bottom: 2px solid $lightgray08;
+            border-bottom: 2px solid $grey-light-08;
         }
-        @media screen and (max-width: 640px) {
+        @media screen and ($media-640) {
             white-space: nowrap;
             margin: 0 10px;
             line-height: 2em;
@@ -99,8 +99,8 @@
         -moz-appearance: none;
         border: 0 !important;
         background: none;
-        color: $lightgray;
+        color: $grey-light;
         font-size: 1em;
-        font-family: $QuickFont;
+        font-family: $font-quicksand;
     }
 }

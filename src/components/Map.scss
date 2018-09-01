@@ -4,7 +4,7 @@
     height: 100%;
     width: 100%;
     flex: 1;
-    @media screen and (max-width: 640px) {
+    @media screen and ($media-640) {
         order: 2;
     }
 }
@@ -15,13 +15,13 @@
     align-items: center;
     padding-left: 20px;
     h3 {
-        font-family: $JosieFont;
+        font-family: $font-josefin;
         font-weight: bold;
         font-size: 1.4em;
         margin: 10px auto 0;
     }
     p, a {
-        font-family: $QuickFont;
+        font-family: $font-quicksand;
         font-size: 1.1em;
         margin-bottom: 5px;
     }

@@ -1,3 +1,5 @@
+@import '../utils/variables';
+
 .app {
   height: 100%;
   width: 100%;
@@ -6,12 +8,7 @@
 .main {
   display: flex;
   height: calc(100% - 70px);
-  @media screen and (max-width: 640px) {
+  @media screen and ($media-640) {
     display: block;
   }
 }
-
-
-
-
-

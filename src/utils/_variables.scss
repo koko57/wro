@@ -1,7 +1,10 @@
-$darkgray: rgba(39, 38, 53, 1);
-$lightgray: rgba(232, 233, 243, 1);
-$lightgray01: rgba(232, 233, 243, 0.1);
-$lightgray08: rgba(232, 233, 243, 0.8);
+$grey-dark: rgba(39, 38, 53, 1);
+$grey-light: rgba(232, 233, 243, 1);
+$grey-light-01: rgba(232, 233, 243, 0.1);
+$grey-light-08: rgba(232, 233, 243, 0.8);
 
-$JosieFont: 'Josefin Sans', sans-serif;
-$QuickFont: 'Quicksand', sans-serif;
+$font-josefin: 'Josefin Sans', sans-serif;
+$font-quicksand: 'Quicksand', sans-serif;
+
+$media-480: 'max-width: 480px';
+$media-640: 'max-width: 640px';

@@ -22,6 +22,6 @@ export const getInfo = new Promise((resolve, reject) => {
         .catch(err => {
             console.log(err, 'Loading error');
         }));
-    resolve(places)
-    reject(new Error('Something went wrong!'))
+    resolve(places);
+    reject(new Error('Something went wrong!'));
 });
