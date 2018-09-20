@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import './App.scss';
 import Map from './Map';
 import Header from './Header';
-import { Sidebar }from './Sidebar';
+import { Sidebar } from './Sidebar';
 import PropTypes from 'prop-types';
 import escapeRegExp from 'escape-string-regexp';
 import { getInfo } from '../utils/fsAPI';
 
 export default class App extends Component {
     constructor(props) {
-        super(props)
+        super(props);
 
         this.state = {
             places: [],
@@ -19,7 +19,7 @@ export default class App extends Component {
             filteredByName: [],
             selected: '',
             query: ''
-        }
+        };
 
         this.filterPlaces = this.filterPlaces.bind(this);
         this.selectMarker = this.selectMarker.bind(this);
@@ -93,7 +93,7 @@ export default class App extends Component {
                 <Header />
                 <div className="main">
                     <Sidebar
-                        //chooses places which should be passed to the props depending on applied filters
+                        // Chooses places which should be passed as props depending on applied filters.
                         places={query ? filteredByName : (placeFilter ? filtered : places)}
                         filterPlaces={this.filterPlaces}
                         filterByName={this.filterByName}
@@ -119,7 +119,7 @@ Sidebar.propTypes = {
     filterByName: PropTypes.func.isRequired,
     selectMarker: PropTypes.func.isRequired,
     query: PropTypes.string
-}
+};
 
 Map.propTypes = {
     places: PropTypes.array.isRequired,
@@ -127,4 +127,4 @@ Map.propTypes = {
     selected: PropTypes.string.isRequired,
     clear: PropTypes.func.isRequired,
     handleClick: PropTypes.func.isRequired
-}
+};

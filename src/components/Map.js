@@ -1,17 +1,17 @@
-/*global google*/
+/* global google */
 import React, { Component } from 'react';
 import { compose, withProps } from 'recompose';
 import PropTypes from 'prop-types';
-import './Map.scss'
+import './Map.scss';
 import { withScriptjs, withGoogleMap, GoogleMap, Marker, InfoWindow } from 'react-google-maps';
 
-//images for selected and unselected markers
+// Images for selected and unselected markers.
 const selected = 'https://vectr.com/koko57/b3Zv7Wgrtj.svg?width=33&height=50&select=b3Zv7Wgrtjpage0';
 const unselected = 'https://vectr.com/koko57/f150I6xd8A.svg?width=30&height=45&select=f150I6xd8Apage0';
 
 const GMap = compose(
     withProps({
-        googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyAV7fdobyXF7j4zxbq5S71P6efvsfx54nA&libraries=drawing,places",
+        googleMapURL: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAV7fdobyXF7j4zxbq5S71P6efvsfx54nA&libraries=drawing,places',
         loadingElement: <div style={{ height: '100%' }} />,
         containerElement: <div style={{ height: '100%' }} />,
         mapElement: <div style={{ height: '100%' }}/>
@@ -42,7 +42,8 @@ const GMap = compose(
                     {loc.venueType && <p>{loc.venueType}</p>}
                     {loc.rating ? <p>Rating: {loc.rating}</p> : <p>No rating yet.</p>}
                     {loc.fsURL && <a href={loc.fsURL}>View on Foursquare</a>}
-                    {(!loc.address || !loc.venueType || !loc.fsURL) && <p>Sorry, we couldn't load more info.</p>}
+                    {(!loc.address || !loc.venueType || !loc.fsURL) &&
+                    <p>Sorry, we couldn't load more info.</p>}
                     </div>
                 </InfoWindow>}
             </Marker>
@@ -52,7 +53,7 @@ const GMap = compose(
 
 export default class Map extends Component {
     render() {
-        return(
+        return (
             <div className="map">
                 <GMap
                     places={this.props.places}
@@ -63,7 +64,7 @@ export default class Map extends Component {
             </div>
         );
     }
-};
+}
 
 GMap.propTypes = {
     places: PropTypes.array.isRequired,
