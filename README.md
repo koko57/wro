@@ -1,4 +1,4 @@
-# Wro - Wroclaw's best places spots
+# Wro - Wroclaw's best spots
 
 ## Table of Contents
 
