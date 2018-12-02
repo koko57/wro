@@ -1,4 +1,4 @@
-# WrocFavs - my favourite places in Wroclaw
+# Wro - Wroclaw's best places spots
 
 ## Table of Contents
 
@@ -9,7 +9,7 @@
 
 
 ## About the App
-This is the last, fifth project of the Udacity FEND program. The app using Google Maps shows my favourite locations in Wroclaw PL. The places can be filtered by location type (coffee spots, techno venues, museums) or by name.
+This is the last, fifth project of the Udacity FEND program. The app using Google Maps shows favourite locations in Wroclaw PL. The places can be filtered by location type (coffee spots, techno venues, museums) or by name.
 Clicking the marker opens the InfoWindow which provides some basic info about each place and displays venue's "best photo" (according to Foursquare).
 
 ## Getting started
@@ -18,7 +18,7 @@ Clone this repo, then
 * install all project dependencies with `npm install`
 * start the server with `npm start`
 
-Live preview: (https://koko57.github.io/wrocfavs/)
+Live preview: (https://koko57.github.io/wro/)
 
 ## Tools used in this project
 
